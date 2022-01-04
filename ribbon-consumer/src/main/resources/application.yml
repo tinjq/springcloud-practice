@@ -4,6 +4,10 @@ spring:
 
 server.port: 9001
 
+#provider-service:
+#  ribbon:
+#    listOfServers: localhost:8081,localhost:8082
+
 eureka:
   client:
     service-url:
