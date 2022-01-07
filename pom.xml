@@ -46,6 +46,7 @@
     <module>ribbon-consumer</module>
     <module>hystrix-consumer</module>
     <module>feign-consumer</module>
+    <module>api-gateway</module>
   </modules>
 
 </project>

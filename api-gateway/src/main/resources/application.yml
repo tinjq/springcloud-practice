@@ -1,0 +1,33 @@
+spring.application.name: api-gateway
+
+server.port: 5555
+
+eureka.client.service-url.defaultZone: http://localhost:1111/eureka
+
+#zuul:
+#  routes:
+#    api-a:
+#      path: /api-a/**
+#      serviceId: provider-service
+#    api-b:
+#      path: /api-b/**
+#      serviceId: feign-consumer
+
+#zuul.routes:
+#  hello-service: /hello-service/**
+#  feign-consumer: /feign-consumer/**
+
+zuul.ignored-services: feign-consumer
+
+zuul.host:
+  socket-timeout-millis: 1000
+  connect-timeout-millis: 10000
+
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 6000
+
+ribbon:
+  ConnectTimeout: 500
+  ReadTimeout: 2000
+  MaxAutoRetries: 1
+  MaxAutoRetriesNextServer: 2
+
