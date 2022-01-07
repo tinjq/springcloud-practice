@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: feign-consumer
+
+server.port: 9001
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka
+
+#开启hystrix熔断机制
+feign:
+  hystrix:
+    enabled: true
+
+#hystrix的超时时间
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000
+  threadpool:
+    default:
+      coreSize: 30
+      maxQueueSize: 1000
+      queueSizeRejectionThreshold: 800
+
+ribbon:
+  eager-load:
+    enabled: true # 饥饿加载(eager-load)模式
+  ConnectTimeout: 1000
+  ReadTimeout: 2000
+  MaxAutoRetries: 1
+  MaxAutoRetriesNextServer: 2
+
+
