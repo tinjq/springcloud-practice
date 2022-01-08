@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: config  # 对应配置文件规则中的 {application} 部分
+  cloud:
+    config:
+      profile: dev
+      uri: http://localhost:7001/
+      label: master
+
+server.port: 7002

@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+#        native:
+#          search-locations: ./config-repo
+        git:
+          uri: https://gitee.com/tinjq/config-repo
+          search-paths: ./
+#          username: tinjq
+#          password: password
+#  profiles:
+#    active: native
+
+
+server.port: 7001

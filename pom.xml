@@ -47,6 +47,8 @@
     <module>hystrix-consumer</module>
     <module>feign-consumer</module>
     <module>api-gateway</module>
+    <module>config-server</module>
+    <module>config-client</module>
   </modules>
 
 </project>
