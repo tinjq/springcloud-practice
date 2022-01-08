@@ -1,10 +1,17 @@
+server.port: 7002
+
 spring:
   application:
-    name: config  # 对应配置文件规则中的 {application} 部分
+    name: config-client
   cloud:
     config:
+      # 对应配置文件规则中的 {application} 部分
+      # 当没有spring.cloud.config.name时，客户端获取的是 spring.application.name
+      # 当一个项目中有需求要获取多个文件时，就需要用到spring.cloud.config.name这个属性，以逗号分割
+      name: config-server
       profile: dev
       uri: http://localhost:7001/
-      label: master
-
-server.port: 7002
+      label: config-label-test
+      # config-server 做了安全保护
+      username: tinjq-name
+      password: 123123

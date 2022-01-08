@@ -1,3 +1,5 @@
+server.port: 7001
+
 spring:
   application:
     name: config-server
@@ -9,10 +11,12 @@ spring:
         git:
           uri: https://gitee.com/tinjq/config-repo
           search-paths: ./
-#          username: tinjq
+          # 公开仓库不需要填写用户名密码，私有仓库需要
+#          username: username
 #          password: password
 #  profiles:
 #    active: native
-
-
-server.port: 7001
+  security:
+    user:
+      name: tinjq-name
+      password: 123123
