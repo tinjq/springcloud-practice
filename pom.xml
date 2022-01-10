@@ -60,6 +60,7 @@
     <module>config-server</module>
     <module>config-client</module>
     <module>rabbitmq-hello</module>
+    <module>config-client-rabbit</module>
   </modules>
 
 </project>

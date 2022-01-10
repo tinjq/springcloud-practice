@@ -20,8 +20,19 @@ spring:
     user:
       name: tinjq-name
       password: 123123
+  rabbitmq:
+    host: 192.168.247.48
+    port: 5672
+    username: springcloud
+    password: 123123
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:1111/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ["info","health","bus-refresh"]
